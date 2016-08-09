@@ -1,0 +1,8 @@
+# Static interface configured with reverse-AP script
+auto @selected_interface
+iface @selected_interface inet static
+  address @subnet.1
+  # gateway @subnet.1
+  netmask 255.255.255.0
+  network @subnet.0
+  broadcast @subnet.255
