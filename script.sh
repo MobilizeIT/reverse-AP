@@ -80,7 +80,7 @@ if [ "$1" = "on" ]; then
   ask_interfaces;
   get_default_interface;
 
-  #iptables -t nat -A POSTROUTING -o $default_interface -j MASQUERADE
+  iptables -t nat -A POSTROUTING -o $default_interface -j MASQUERADE
   iptables-save > /dev/null
 
   if ! command_exists dhcpd; then
